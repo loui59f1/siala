@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
+    <meta name="robots" content="noindex">
     <meta charset="utf-8">
+    <meta name="description" content="Siala laver trådløse, dansk design højttalere med eksklusive materialer og god lyd. Højttaleren bliver håndlavet specielt til dig på vores værksted i København.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siala</title>
     <link rel="stylesheet" href="css/style.css">
@@ -12,6 +14,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .flickity-button:hover {
+            background: transparent;
+            cursor: pointer;
+        }
+
+        /* no circle */
+        .flickity-button {
+            background: transparent;
+        }
+
+        /* big previous & next buttons */
+        .flickity-prev-next-button {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* icon color */
+        .flickity-button-icon {
+            fill: white;
+        }
+
+        /* hide disabled button */
+        .flickity-button:disabled {
+            display: none;
+        }
+
+        @media only screen and (max-width: 480px) {
+
+            /* big previous & next buttons */
+            .flickity-prev-next-button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+    </style>
 </head>
 
 <body>

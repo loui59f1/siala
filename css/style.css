@@ -491,7 +491,7 @@ video {
 
 #carousel h1 {
     font-family: 'Golden Ranger', sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 60px;
     margin-bottom: 15px;
 }
@@ -603,42 +603,6 @@ video {
     align-content: center;
 }
 
-.flickity-button:hover {
-    background: transparent;
-    cursor: pointer;
-}
-
-/* no circle */
-.flickity-button {
-    background: transparent;
-}
-
-/* big previous & next buttons */
-.flickity-prev-next-button {
-    width: 80px;
-    height: 80px;
-}
-
-/* icon color */
-.flickity-button-icon {
-    fill: white;
-}
-
-/* hide disabled button */
-.flickity-button:disabled {
-    display: none;
-}
-
-@media only screen and (max-width: 480px) {
-
-    /* big previous & next buttons */
-    .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-
 #behindthescenes .row {
     display: block;
     padding: 25px;
@@ -655,7 +619,7 @@ video {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 400;
-    margin-top: 25px;
+    margin-top: 15px;
     color: #000;
 }
 
@@ -1723,6 +1687,10 @@ hr {
     color: #000 !important;
 }
 
+#checkout .subheader_title h3 {
+    color: #fff !important;
+}
+
 #checkout .sidebar h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
@@ -2468,7 +2436,7 @@ footer h3 {
     #behindthescenes .row {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-gap: 5em;
+        grid-gap: 3em;
         padding: 50px 25px;
     }
 
