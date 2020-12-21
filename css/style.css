@@ -228,7 +228,7 @@ header {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 200;
+    z-index: 500;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.97);
@@ -247,7 +247,7 @@ header {
 #burger-menu a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     color: #000;
     display: block;
@@ -423,6 +423,8 @@ video {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
+    color: #000;
+    margin-left: 3px;
 }
 
 #intro h1 {
@@ -601,6 +603,42 @@ video {
     align-content: center;
 }
 
+.flickity-button:hover {
+    background: transparent;
+    cursor: pointer;
+}
+
+/* no circle */
+.flickity-button {
+    background: transparent;
+}
+
+/* big previous & next buttons */
+.flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+}
+
+/* icon color */
+.flickity-button-icon {
+    fill: white;
+}
+
+/* hide disabled button */
+.flickity-button:disabled {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* big previous & next buttons */
+    .flickity-prev-next-button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
 #behindthescenes .row {
     display: block;
     padding: 25px;
@@ -618,6 +656,7 @@ video {
     font-size: 13px;
     font-weight: 400;
     margin-top: 25px;
+    color: #000;
 }
 
 #behindthescenes h1 {
@@ -645,7 +684,7 @@ video {
 #product_info h3 {
     font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 100;
     font-size: 25px;
     margin-top: 15px;
     margin-bottom: 25px;
@@ -828,7 +867,7 @@ video {
 .tooltip img {
     width: 2.5%;
     height: auto;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     transform: scale(1);
     animation: pulse 2s infinite;
@@ -1070,8 +1109,10 @@ video {
 }
 
 #iconbox {
-    padding: 40px 0;
+    padding: 20px 0;
     padding-bottom: 0;
+    background-color: #1F1F1F;
+    padding-bottom: 100px;
 }
 
 #iconbox .row {
@@ -1079,11 +1120,11 @@ video {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 50px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 #iconbox .column {
-    padding: 0 50px;
+    padding: 0 30px;
 }
 
 #iconbox img {
@@ -1091,15 +1132,18 @@ video {
 }
 
 #iconbox h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 100;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 #iconbox p {
     font-size: 14px;
+    color: #fff;
+    line-height: 25px;
 }
 
 /*============================================================================================*/
@@ -1149,6 +1193,14 @@ video {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 400;
+}
+
+#product .row h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
 }
 
 #product h1 {
@@ -1332,6 +1384,54 @@ video {
     font-weight: 400;
     font-size: 14px;
     line-height: 28px;
+}
+
+/*============================================================================================*/
+/* Produktside Tab Gallery */
+/*============================================================================================*/
+
+/* Grid af tre kolonner til thumbnails */
+.pg_column {
+    float: left;
+    width: 31.2%;
+    padding: 10px;
+    margin-right: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+}
+
+@media (max-width: 550px) {
+    .pg_column {
+        width: 30%;
+    }
+}
+
+.pg_column:last-child {
+    margin-right: 0;
+}
+
+/* Styler thumbnail billederne */
+.pg_column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.pg_column img:hover {
+    opacity: 1;
+}
+
+.pg_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Det store aktive produktbillede */
+.pg_container {
+    position: relative;
+    display: none;
+    background-color: #f6f6f6;
 }
 
 /*============================================================================================*/
@@ -1705,6 +1805,7 @@ hr {
     margin-bottom: 5px;
     font-weight: 500;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .amount {
@@ -1718,7 +1819,7 @@ hr {
 #order h2 {
     font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 40px;
     margin-bottom: 15px;
 }
@@ -1732,14 +1833,17 @@ hr {
 
 #order .icon_order {
     float: right;
-    margin-right: 50px;
+    margin-right: 30px;
     margin-top: -25px;
-    width: 120px;
-    height: 120px;
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     transform: scale(0.5);
     animation: pulse 2s infinite;
     animation-timing-function: linear;
+}
+
+#order .icon_order img {
+    width: 120px;
+    height: 120px;
 }
 
 /*============================================================================================*/
@@ -1877,7 +1981,8 @@ hr {
     color: #fff;
     text-align: center;
     cursor: default;
-    margin-bottom: 55px;
+    margin-bottom: 80px;
+    padding-top: 0;
 }
 
 
@@ -1914,6 +2019,15 @@ hr {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 400;
+}
+
+#about .row h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 5px;
 }
 
 #about h1 {
@@ -2074,6 +2188,7 @@ hr {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 400;
+    margin-bottom: 5px;
 }
 
 #contact h1 {
@@ -2226,6 +2341,19 @@ footer h3 {
         position: static;
         margin-bottom: 25px;
     }
+
+    #order .row {
+        display: block;
+        padding: 25px;
+        margin-bottom: 90px;
+    }
+
+    #order .icon_order img {
+        width: 80px;
+        height: 80px;
+        margin-top: 40px;
+    }
+
 }
 
 /* MAX-WIDTH 480px ========================= */
@@ -2288,6 +2416,10 @@ footer h3 {
         margin: 0;
     }
 
+    .logo_normal {
+        margin-left: 30px;
+    }
+
 }
 
 /* MIN WIDTH 769px ========================= */
@@ -2346,6 +2478,16 @@ footer h3 {
         grid-template-rows: 1fr;
         grid-column-gap: 5em;
         grid-row-gap: 0px;
+        padding-top: 0;
+    }
+
+    #behindthescenes .sectionwrapper {
+        background-color: #fff;
+        margin-top: -80px;
+    }
+
+    #product_info .sectionwrapper {
+        background-color: #fff;
     }
 
 

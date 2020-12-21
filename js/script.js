@@ -5,7 +5,6 @@ function sidenVises() {
 
     document.querySelector("#closebtn").addEventListener("click", closeNav);
     document.getElementById("openbtn").addEventListener("click", openNav);
-
 }
 
 function openNav() {

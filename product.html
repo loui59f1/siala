@@ -10,73 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        /* The grid: Four equal columns that floats next to each other */
-        .pg_column {
-            float: left;
-            width: 31.2%;
-            padding: 10px;
-            margin-right: 16px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: #f6f6f6;
-        }
-
-        @media (max-width: 550px) {
-            .pg_column {
-                width: 30%;
-            }
-        }
-
-        .pg_column:last-child {
-            margin-right: 0;
-        }
-
-
-        /* Style the images inside the grid */
-        .pg_column img {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .pg_column img:hover {
-            opacity: 1;
-        }
-
-        /* Clear floats after the columns */
-        .pg_row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* The expanding image container (positioning is needed to position the close button and the text) */
-        .pg_container {
-            position: relative;
-            display: none;
-            background-color: #f6f6f6;
-        }
-
-        /* Expanding image text */
-        #imgtext {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: white;
-            font-size: 20px;
-        }
-
-        /* Closable button inside the image */
-        .closebtn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            color: white;
-            font-size: 35px;
-            cursor: pointer;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -120,6 +53,7 @@
         <!-- === SUBHEADER SECTION === -->
         <div class="subheader"></div>
 
+        <!-- === PRODUKT SECTION === -->
         <section id="product">
             <div class="sectionwrapper shadow">
                 <div class="subheader_title">
@@ -279,6 +213,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- === PRODUCT DESCRIPTION SECTION === -->
         <section id="product_description">
             <div class="sectionwrapper shadow bg_white">
                 <div class="heading">
@@ -286,8 +222,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <h2>Overskrift</h2>
-                        <h3>En lille underoverskrift</h3>
+                        <h2>Fokus på detaljerne</h2>
                         <p>Hos Siala ses filosofien af et kompromisløst design uanset vinklen. Vores bagside er dekoreret med et børstet messing panel med indbygget LED indikatorer, AUX plug-in samt power input. Åbningen til basporten er håndbygget efter eget valgt materiale.
                         </p>
                     </div>
@@ -300,8 +235,7 @@
                         <img class="description_img" src="img/description_2.jpg">
                     </div>
                     <div class="column">
-                        <h2>Overskrift</h2>
-                        <h3>En lille underoverskrift</h3>
+                        <h2>Teknologien bag</h2>
                         <p>Vi arbejder med den nyeste teknologi i vores højttalere. Højttalerne er lavet med SMART bluetooth knapper, så du blot skal placere fingeren over de indgraverede symboler i din højttaler for at bruge den.
                         </p>
                     </div>
@@ -310,6 +244,7 @@
         </section>
     </main>
 
+    <!-- === FOOTER === -->
     <footer>
         <div class="sectionwrapper">
             <div class="row">
@@ -353,6 +288,8 @@
     </div>
 
     <script src="js/script.js"></script>
+
+    <!-- === MATERIALE HOVER INFO === -->
     <script>
         document.querySelector(".material_tooltip1 img").addEventListener("mouseover", showMaterialBox);
         document.querySelector(".material_tooltip1 img").addEventListener("mouseout", hideMaterialBox);
@@ -412,7 +349,7 @@
 
     </script>
 
-    <!-- === WP REST API FAG === -->
+    <!-- === WP REST API PRODUKT === -->
     <script>
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
@@ -436,6 +373,8 @@
         }
 
     </script>
+
+    <!-- === TAB GALLERY (FRA W3 SCHOOLS) === -->
     <script>
         function openImg(imgs) {
             var expandImg = document.querySelector(".product_img");

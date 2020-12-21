@@ -50,9 +50,11 @@
     </header>
 
     <main>
+
         <!-- === SUBHEADER SECTION === -->
         <div class="subheader"></div>
 
+        <!-- === BASKET SECTION === -->
         <section id="basket">
             <div class="sectionwrapper shadow bg_white">
                 <div class="subheader_title">
@@ -64,7 +66,7 @@
                             <h3>PRODUKTER</h3><br>
                             <img src="img/product_image_03.png">
                             <div class="product_text">
-                                <h3>SIALA V1</h3>
+                                <h3>SIALA SAGA</h3>
                                 <p>- Egetræ og cognac læder - uden greb</p>
                             </div>
                         </div>
@@ -73,7 +75,7 @@
                         <div class="product_basket">
                             <img src="img/product_image_01.png">
                             <div class="product_text">
-                                <h3>SIALA V1</h3>
+                                <h3>SIALA SAGA</h3>
                                 <p>- Hvid corion og sort læder - uden greb</p>
                             </div>
                         </div>
@@ -106,6 +108,7 @@
         </section>
     </main>
 
+    <!-- === FOOTER === -->
     <footer>
         <div class="sectionwrapper">
             <div class="row">
@@ -148,42 +151,8 @@
         </div>
     </div>
 
-
-    <!-- === WP REST API FAG === -->
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let id = urlParams.get("id");
-        let product;
-        document.addEventListener("DOMContentLoaded", getTheDish);
-        async function getTheDish() {
-
-            let url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/produkter/" + id;
-            let jsonData = await fetch(url);
-            product = await jsonData.json();
-            //console.log("LOADING DONE",theDish);
-            //            showDishes();
-
-            document.querySelector(".product_img").src = product.produktbillede.guid;
-            document.querySelector(".product_img1").src = product.produktbillede.guid;
-            document.querySelector(".product_img2").src = product.produktbillede2.guid;
-            document.querySelector(".product_img3").src = product.produktbillede3.guid;
-            document.querySelector(".product_text").innerHTML = product.beskrivelse;
-            document.querySelector(".product_title").innerHTML = product.produktnavn;
-            document.querySelector(".product_price").innerHTML = product.pris;
-        }
-
-    </script>
-    <script>
-        function openImg(imgs) {
-            var expandImg = document.querySelector(".product_img");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-        }
-
-    </script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

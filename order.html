@@ -50,9 +50,11 @@
     </header>
 
     <main>
+
         <!-- === SUBHEADER SECTION === -->
         <div class="subheader"></div>
 
+        <!-- === ORDER SECTION === -->
         <section id="order">
             <div class="sectionwrapper shadow bg_white">
                 <div class="subheader_title">
@@ -70,7 +72,7 @@
 
                         </div>
                         <div class="icon_order">
-                            <img src="img/complete.svg">
+                            <img src="img/complete.png">
                         </div>
                     </div>
                 </div>
@@ -107,6 +109,7 @@
 
     </main>
 
+    <!-- === FOOTER === -->
     <footer>
         <div class="sectionwrapper">
             <div class="row">
@@ -149,41 +152,8 @@
         </div>
     </div>
 
-    <!-- === WP REST API FAG === -->
-    <script>
-        let urlParams = new URLSearchParams(window.location.search);
-        let id = urlParams.get("id");
-        let product;
-        document.addEventListener("DOMContentLoaded", getTheDish);
-        async function getTheDish() {
-
-            let url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/produkter/" + id;
-            let jsonData = await fetch(url);
-            product = await jsonData.json();
-            //console.log("LOADING DONE",theDish);
-            //            showDishes();
-
-            document.querySelector(".product_img").src = product.produktbillede.guid;
-            document.querySelector(".product_img1").src = product.produktbillede.guid;
-            document.querySelector(".product_img2").src = product.produktbillede2.guid;
-            document.querySelector(".product_img3").src = product.produktbillede3.guid;
-            document.querySelector(".product_text").innerHTML = product.beskrivelse;
-            document.querySelector(".product_title").innerHTML = product.produktnavn;
-            document.querySelector(".product_price").innerHTML = product.pris;
-        }
-
-    </script>
-    <script>
-        function openImg(imgs) {
-            var expandImg = document.querySelector(".product_img");
-            var imgText = document.getElementById("imgtext");
-            expandImg.src = imgs.src;
-            imgText.innerHTML = imgs.alt;
-            expandImg.parentElement.style.display = "block";
-        }
-
-    </script>
     <script src="js/script.js"></script>
+
 </body>
 
 </html>
