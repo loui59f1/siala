@@ -306,6 +306,7 @@ header {
 
 .video-text .back_link a:before {
     background: #fff;
+    margin-top: 2px;
 
 }
 
@@ -331,6 +332,14 @@ header {
     height: 700px;
     width: 100%;
 }
+
+/*
+#header-video .back_link {
+    background-color: #f5f5f5;
+    max-width: 300px;
+    padding-left: 10px;
+}
+*/
 
 #header-video video {
     width: 100%;
@@ -380,6 +389,7 @@ header {
     margin-top: 15px;
     margin-bottom: 15px !important;
     letter-spacing: 1px;
+    color: #fff !important;
 }
 
 .video-text span {
@@ -457,7 +467,19 @@ video {
 }
 
 #intro .back_link {
-    margin-top: 20px;
+    background: rgb(243, 201, 115);
+    background: linear-gradient(175deg, rgba(243, 201, 115, 1) 0%, rgba(196, 153, 85, 1) 100%);
+    max-width: 260px;
+    padding-left: 20px;
+    margin-top: 40px;
+}
+
+#intro .back_link a {
+    color: #fff;
+}
+
+#intro .back_link a::before {
+    background: #fff;
 }
 
 #carousel {
@@ -494,11 +516,22 @@ video {
 }
 
 #carousel h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
     margin-bottom: 15px;
+}
+
+#carousel .gallery_title h3 {
+    font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 #carousel h1 {
@@ -536,9 +569,6 @@ video {
 
 .gallery_title h3 {
     display: block;
-    font-size: 18px !important;
-    font-weight: 700 !important;
-    text-transform: none !important;
 }
 
 .gallery_title button {
@@ -627,11 +657,11 @@ video {
 }
 
 #behindthescenes h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
-    margin-top: 15px;
+    letter-spacing: 1px;
     color: #000;
 }
 
@@ -1121,6 +1151,7 @@ video {
     color: #fff;
     line-height: 25px;
     opacity: 0.8;
+    font-weight: 300;
 }
 
 /*============================================================================================*/
@@ -1362,8 +1393,8 @@ video {
 
 #product_description p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 200;
+    font-size: 16px;
     line-height: 28px;
 }
 
@@ -2007,10 +2038,11 @@ hr {
 }
 
 #about .row h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
+    letter-spacing: 1px;
     color: #000;
     margin-bottom: 5px;
 }
@@ -2135,10 +2167,10 @@ hr {
 #contact .contact_text {
     position: absolute;
     color: #fff;
-    margin-top: -80px;
-    margin-left: 25px;
+    margin-top: -60px;
+    margin-left: 5px;
     cursor: pointer;
-    background-color: #0a0a0a;
+    background-color: transparent;
     padding: 25px;
 }
 
@@ -2161,18 +2193,25 @@ hr {
 }
 
 #contact .contact_text img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     display: inline-block !important;
     margin-right: 10px;
     margin-left: 10px;
 }
 
+#contact .contact_text img:hover {
+    filter: brightness(0.8);
+    transition: 2s;
+}
+
 #contact h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
+    letter-spacing: 1px;
+    color: #000;
     margin-bottom: 5px;
 }
 
@@ -2568,7 +2607,7 @@ footer h3 {
     #product_description .row {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-gap: 9em;
+        grid-gap: 5em;
         padding: 25px;
         margin-bottom: 50px;
     }
@@ -2576,7 +2615,7 @@ footer h3 {
     #product_description .row:last-child {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        grid-gap: 9em;
+        grid-gap: 5em;
         padding: 25px;
     }
 

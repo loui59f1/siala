@@ -83,7 +83,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <video id="video_about" autoplay controls muted loop>
+                        <video id="video_about" autoplay controls loop>
                             <source src="video/video_about.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -159,20 +159,23 @@
         </div>
     </div>
 
-    <!-- === WP REST API OM INTRO === -->
+    <!-- === WP REST API - OM SIDE === -->
     <script>
+        // Vi definerer variablerne vi bruger længere nede
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
         let sider;
-        document.addEventListener("DOMContentLoaded", getTheDish);
-        async function getTheDish() {
 
+        // Når siden er loadet kaldes funktionen getContent
+        document.addEventListener("DOMContentLoaded", getContent);
+        async function getContent() {
+
+            // Definerer vores WP URL hvor vi henter indhold fra
             let url = "http://www.weblouise.dk/kea/2_semester/eksamen/siala_wordpress/wordpress/wp-json/wp/v2/om/103";
             let jsonData = await fetch(url);
             sider = await jsonData.json();
-            //console.log("LOADING DONE",theDish);
-            //            showDishes();
 
+            // Vi sætter indhold fra fields ind i HTML
             document.querySelector(".about_img").src = sider.image.guid;
             document.querySelector(".about_tekst").innerHTML = sider.content.rendered;
             document.querySelector(".header_about").textContent = sider.heading;
