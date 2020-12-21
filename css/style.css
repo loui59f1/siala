@@ -2240,7 +2240,8 @@ footer h3 {
     padding-left: 40px;
     padding-bottom: 20px;
     cursor: pointer;
-
+    text-decoration: none;
+    color: #000;
 }
 
 .li2 {
