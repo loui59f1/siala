@@ -272,7 +272,7 @@ header {
     position: absolute;
     top: 25px;
     left: 22px;
-    font-size: 28px;
+    font-size: 25px;
     cursor: pointer;
     display: none;
 }
@@ -1122,10 +1122,6 @@ video {
     background-size: cover;
     background-position: top;
     position: relative;
-}
-
-#product .sectionwrapper {
-    background-color: #fff;
 }
 
 #product .product_price {
@@ -2285,71 +2281,6 @@ footer h3 {
 /* MAX-WIDTH 540px ========================= */
 
 @media (max-width: 540px) {
-
-    #about .column {
-        margin-bottom: 0;
-    }
-
-    #basket .sidebar_text {
-        padding-bottom: 35px;
-    }
-
-    #basket .back_link {
-        padding-bottom: 5px;
-    }
-
-    #checkout .back_link {
-        padding-bottom: 5px;
-    }
-
-    .delivery img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .delivery_text {
-        margin-top: 5px;
-    }
-
-    .delivery_inner {
-        margin-top: 25px;
-        padding: 25px;
-        border: 1px solid #ebebeb;
-        cursor: pointer;
-        margin-right: 0px;
-    }
-
-    #order .product_order.list {
-        margin-top: 25px;
-    }
-
-    #order .product_text {
-        margin-top: 10px;
-    }
-
-    .amount {
-        float: right;
-    }
-
-    #order .summary_row div {
-        margin-bottom: 5px;
-    }
-
-    #order .product_text {
-        margin-bottom: 0;
-    }
-
-    .basket_price {
-        position: static;
-        display: block;
-        float: none;
-        margin-top: 0px;
-        margin-right: 20px;
-    }
-
-    #basket hr {
-        margin-top: 20px;
-    }
 
     #iconbox .row {
         display: block;
