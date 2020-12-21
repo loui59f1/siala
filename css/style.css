@@ -481,6 +481,18 @@ video {
     padding: 35px;
 }
 
+#carousel .product_link {
+    position: relative;
+    z-index: 200;
+}
+
+#carousel .product_link a {
+    width: 550px;
+    height: 400px;
+    display: block;
+    cursor: pointer;
+}
+
 #carousel h3 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -2729,6 +2741,12 @@ footer h3 {
 
     .summary_row div {
         margin-bottom: 25px;
+    }
+
+    footer {
+        padding: 30px 0;
+        background-color: transparent;
+        color: #000;
     }
 
 
